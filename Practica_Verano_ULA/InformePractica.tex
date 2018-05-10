@@ -1,0 +1,282 @@
+\documentclass[letter,12pt]{report}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[sfdefault, condensed]{roboto}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1cm]{geometry}
+\usepackage{multicol,graphicx,fancyhdr,eso-pic,url,float,cite,lmodern,listings,times,textcomp,amsthm,amsmath,amssymb,dsfont,color,colortbl,sidecap,xspace,epic,eepic,anysize, setspace}
+\usepackage{lipsum}
+%\usepackage{apacite}%bibliografia formato bibtex
+
+%Tipos de Letra
+\renewcommand{\rmdefault}{phv} % Arial
+%\usepackage{mathptmx} %Times
+%Margenes
+\marginsize{3cm}{2cm}{2cm}{2cm}
+\spacing{1.5}%interlineado
+
+%%%Entornos de desarrollo
+\newtheorem{ejemplo}{Ejemplo}
+\newtheorem{definir}{Definición}
+\newtheorem{prueba}{Prueba}
+\newtheorem{demo}{Demostración}
+\newtheorem{obs}{Observación}
+  
+\newcommand\BackgroundPic{ \put(-3,0){ \parbox[b][\paperheight]{\paperwidth}{ \vfill \centering \includegraphics[width=\paperwidth,height=\paperheight]{portada.jpg} \vfill }}} 
+  
+  %Definicion de Colores
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+\definecolor{verdeo}{rgb}{0,.5,0.2}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\newcommand\gris[1]{\textcolor[gray]{.35}{\emph{#1}}}
+\newcommand\rojo[1]{\textcolor[rgb]{1,0,0}{#1}}
+\newcommand\blue[1]{\textcolor[rgb]{0,0,1}{{#1}}}
+\newcommand\azul[1]{\textcolor[rgb]{0,0,1}{#1}}
+\newcommand\verde[1]{\textcolor[rgb]{0,.5,0.2}{#1}}
+\newcommand\naranjo[1]{\textcolor[rgb]{1.00,0.36,0.06}{\textbf{#1}}}
+\newcommand\blanco[1]{\textcolor[rgb]{1,1,1}{\textbf{#1}}}
+\newcommand {\red}[1]{\textcolor[rgb]{1.00,0.00,0.00}{#1}}
+\newcommand\cita[1]{{\scriptsize \begin{flushright}\emph{(#1)}\end{flushright}}}
+  
+  %%%CODIGOS DE PROGRAMACION
+    \renewcommand{\lstlistingname}{Algoritmo}
+\lstset{
+	tabsize=4,
+	rulecolor=,
+	language=,
+        basicstyle=\footnotesize,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=true,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        frame=single,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        numbers=left,
+        numbersep=15pt,
+        numberstyle=\tiny,
+        keywordstyle=\bfseries \color[RGB]{0,2,216},
+        commentstyle=\color[rgb]{0,.5,0.2},
+        stringstyle=\color[RGB]{216,0,114},
+}
+%%%%FIN CODIGOS DE PROGRAMACION
+\def\figurename{}
+  
+%%%%%%%%%%ENCABEZADO Y PIE DE PAGINA
+%encabezado de las paginas pares e impares.
+\rhead[PP]{Práctica Profesional I}
+\renewcommand{\headrulewidth}{0.5pt}
+%pie de pagina de las paginas pares e impares.
+\lfoot[nombre]{Nombre Apellido}
+\rfoot[rut]{Universidad de los Lagos}
+\renewcommand{\footrulewidth}{0.5pt}
+%encabezado y pie de pagina de la pagina inicial de un capitulo.
+\fancypagestyle{plain}{
+\fancyhead[R]{Práctica Profesional I}
+\fancyfoot[L]{Nombre Apellido}
+\fancyfoot[R]{Universidad de los Lagos}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+}
+\pagestyle{fancy} 
+%%%%%%%%%%FIN ENCABEZADO Y PIE DE PAGINA  
+ 
+ 
+ 
+ 
+\begin{document}
+
+%%%%%%%%%%%PORTADA%%%%%%%%%%%%%%%%%%%%%
+\setlength{\unitlength}{1 cm} %Especificar unidad de trabajo
+\thispagestyle{empty}
+
+\AddToShipoutPicture*{\BackgroundPic}
+
+   \title{\scshape\vspace{-2cm}\Huge{T\'itulo Práctica}\\\vspace{1cm}
+        \Large Departamento de Ciencias Exactas\\
+        \Large Ingenier\'ia Civil en Informática\\\large Osorno, Chile}
+   \author{ALUMNO\\CORREO}
+   \date{\today}
+   \maketitle
+   \ClearShipoutPicture
+
+\cleardoublepage
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\tableofcontents
+\listoffigures
+\renewcommand{\listtablename}{Índice de tablas}
+\listoftables
+%%%%%%%%%%%%%FIN PORTADA%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%\thispagestyle{empty}
+%\begin{abstract}
+%\end{abstract}
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\chapter{Introducción}
+\section{Introducción}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua\cite{001}. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum\cite{001,002}.
+\subsection{Objetivos de la práctica}
+\subsubsection{Generales}
+\textbf{Práctica de Verano 1:\\} Tendrá por objeto permitir que el alumno se familiarice con el ámbito laboral, desarrollando actividades preferentemente de terreno.
+
+\textbf{Práctica de Verano 2:\\} Tendrá por objeto permitir que el alumno se desempeñe como ingeniero.
+
+\subsubsection{Específicos}
+\textbf{Práctica de Verano 1:}
+\begin{enumerate}\justifying
+  \item Conocer la estructura organizacional de la empresa y formas de operación de entidades, desde la perspectiva de la carrera Ingeniería Civil en Informática, Administración y Gestión.
+  \item Conocer y aprender métodos de trabajo, tendientes a la operación de recursos materiales y humanos en el desarrollo de actividades informáticas.
+  \item Visualizar y proponer el método de ingeniería en el desarrollo de actividades colaborativas de solución de problemas, en áreas informáticas para que conozca desde la perspectiva de los trabajadores el modo de ser del personal, situación social y su inserción en la empresa.
+\end{enumerate}
+
+\textbf{Práctica de Verano 2:}
+\begin{enumerate}\justifying
+  \item Conocer la estructura organizacional de la empresa y formas de operación de entidades, desde la perspectiva de la carrera Ingeniería Civil en Informática, Administración y Gestión.
+  \item Aprender métodos de trabajo, tendientes a la operación, administración y gestión, en áreas informáticas.
+  \item Detectar, proponer y desarrollar soluciones a problemas desde una visión de Ingeniería Civil en Informática.
+\end{enumerate}
+
+
+
+\section{Datos del Alumno}
+\begin{description}\justifying
+  \item [Nombre del alumno] Lorem ipsum
+  \item [Año de ingreso a la Universidad] 20XX
+  \item [Tipo   de práctica] Practica de Verano X
+  \item [Fecha de realización de la práctica] XX de XXXXX de 20XX - XX de XXXXX de 20XX
+\end{description}
+
+
+\chapter{Empresa}
+\section{Datos de la Empresa}
+
+\begin{description}\justifying
+  \item [Nombre de la empresa] Lorem ipsum
+  \item [RUT] Lorem ipsum
+  \item [Representante Legal] Lorem ipsum
+  \item [Rubro] Lorem ipsum
+  \item [Dirección] Lorem ipsum
+  \item [Sitio Web] Lorem ipsum
+  \item [Teléfono] +56XX-XXXX-XXXX
+  \item [Nombre del supervisor] Lorem ipsum
+  \begin{description}\justifying
+  \item[Cargo] Lorem ipsum
+\end{description}
+  \item [Sección en la que desarrolló la práctica] Lorem ipsum
+  \item [Relación familiar con alguien de la empresa] (SI/NO)
+\end{description}
+
+
+\section{Descripción de la Empresa}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|}\hline
+  & & \\
+  \hline\hline
+  & & \\
+  & & \\\hline
+\end{tabular}
+\caption{Ejemplo Tabla}
+\end{table}
+
+\subsection{Organigrama}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+\begin{figure}[H]
+\centering
+ \includegraphics[scale=0.1]{portada}
+  \caption{Organigrama de la empresa \dots}
+\end{figure}
+
+\section[Descripción del Área]{Descripción del área donde desarrolló la práctica}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+\begin{figure}[H]
+\centering
+ \includegraphics[scale=0.1]{portada}
+  \caption{Organigrama del área \dots}
+\end{figure}
+
+
+
+\subsection{Resumen de actividades realizadas}\label{actividades}
+Debe tener relación con los objetivos de la práctica.
+\begin{enumerate}\justifying
+  \item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  \item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  \item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{enumerate}
+
+
+
+\chapter{Desarrollo de la Práctica de Verano}
+
+\section{Descripción del Proyecto o Actividad} 
+
+\rojo{Solo si corresponde, obligatorio en la práctica verano II}. Describa el proyecto en que participó, indicando objetivos y resultados esperados. Relacionado al punto c) del articulo 4to.
+
+\section{Descripción de Actividades Realizadas}
+Debe indicar detalladamente que actividades se realizaron, además de tareas específicas, áreas involucradas de la empresa, herramientas y plataformas usadas, resultados obtenidos.
+
+
+\chapter{Discusión y Opinión Personal}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+\chapter{Conclusión}
+
+Debe indicar los beneficios obtenidos por la empresa producto de su cometido, así como los beneficios personales obtenidos por usted en cuanto a lo aprendido, sean estos conocimientos, habilidades o aptitudes (considerando el perfil de la carrera).
+
+%%%%%
+%agregar referencias
+%\bibliographystyle{ieeetr}
+%\bibliography{mybib.bib}
+
+\begin{thebibliography}{99}
+%Bibliografía Formato IEEE
+\bibitem {000} N. Apellido, Titulo, Revista, Edición, Paginas. Ciudad, Pais, Año,
+
+\bibitem {001} R. M. Gutierrez, El impacto de la sobrepoblación de invertebrados en un ecosistema selvático, Revista Mundo Natural, 8, 73-82. 2013.
+
+\bibitem {002} R.A. Day How to Write and Publish a Scientific Paper, Second edn. ISI Press, Philadelphia. 1983
+\end{thebibliography}  
+
+\renewcommand{\appendixname}{Anexos}
+\appendix
+\chapter{Titulo Anexo}
+\section{Uso de Algoritmos en \LaTeX{}}\label{A:01}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+Si en algún caso se elabora un software con líneas de código muy extensas, es recomendable incluirlas como anexo y referenciarlas que incluirlas en le mismo desarrollo, pero si son relativamente cortas (menos de una página) no hay problema de incluirlas en el desarrollo de este informe, el Algoritmo \ref{codPH} es un ejemplo de un código PHP que es posible incluirlo en el desarrollo.
+
+\lstset{language=PHP} %cambia aqui el lenguaje
+\begin{lstlisting}[caption= C\'odigo PHP de impresi\'on de una variable, label = codPH]
+<?php
+    $v = 5;
+    echo "El valor es: $v\n";
+?>
+\end{lstlisting}
+
+
+\section{Titulo Sección}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{document}

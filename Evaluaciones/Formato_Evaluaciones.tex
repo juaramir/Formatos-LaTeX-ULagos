@@ -1,0 +1,145 @@
+\documentclass[letter,10pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xspace,epic,eepic}
+\usepackage[margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{lmodern}
+\usepackage{listings}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{wrapfig}
+\usepackage{sidecap}
+\usepackage{blindtext}
+\usepackage[sfdefault]{roboto}
+\oddsidemargin 0in
+\textwidth 6.75in
+\topmargin 0in
+\textheight 8.5in
+\parindent 0.5em
+\parskip 1ex
+  \newcommand {\e}[1]{{\scriptsize \textsf{#1}}}
+
+  
+  %Definicion de Colores
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+\definecolor{verdeo}{rgb}{0,.5,0.2}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\newcommand\gris[1]{\textcolor[gray]{.35}{\emph{#1}}}
+\newcommand\rojo[1]{\textcolor[rgb]{1,0,0}{\textbf{#1}}}
+\newcommand\rojito[1]{\textcolor[rgb]{1,0,0}{#1}}
+\newcommand\blue[1]{\textcolor[rgb]{0,0,1}{{#1}}}
+\newcommand\azul[1]{\textcolor[rgb]{0,0,1}{\textbf{#1}}}
+\newcommand\azulito[1]{\textcolor[rgb]{0,0,1}{#1}}
+\newcommand\verde[1]{\textcolor[rgb]{0,.5,0.2}{\textbf{#1}}}
+\newcommand\naranjo[1]{\textcolor[rgb]{1.00,0.36,0.06}{\textbf{#1}}}
+\newcommand {\red}[1]{\textcolor[rgb]{1.00,0.00,0.00}{#1}}
+\newcommand\cita[1]{{\scriptsize \begin{flushright}\emph{(#1)}\end{flushright}}}
+  
+  
+\lstset{
+	%backgroundcolor=\color{lbcolor},
+	frame=Ltb,
+  framerule=0pt,
+  aboveskip=0.5cm,
+	tabsize=4,
+	rulecolor=,
+	language=C, %%%CAMBIAR POR LENGUAJE DE PREFERENCIA
+  stringstyle=\ttfamily,
+        basicstyle=\footnotesize,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=true,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        %frame=single,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        %tipos de letra y colores
+        identifierstyle=\ttfamily,
+        keywordstyle=\bfseries \color{black}, %palabras reservadas
+        commentstyle= \color[RGB]{99,99,99}, %comentarios
+        stringstyle=\color{black},%cadena de texto
+        %numeracion de lineas
+        framextopmargin=3pt,
+        framexbottommargin=3pt,
+        framexleftmargin=0.4cm,
+        framesep=0pt,
+        rulesep=.4pt,
+        rulesepcolor=\color{black},
+        numbers=left,
+        numbersep=15pt,
+        numberstyle=\tiny,
+        numberfirstline = false,
+        breaklines=true,
+}
+
+  \usepackage{epsfig}
+\usepackage{hhline}
+\usepackage{epstopdf}
+\usepackage{etoolbox}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\usetikzlibrary{snakes}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{patterns}
+\usetikzlibrary{fit}
+\usetikzlibrary{positioning} % LATEX and plain TEX
+
+%
+%\markboth{Universidad del B\'io-Bio}{Departamento de Auditor\'ia e Inform\'atica}
+\def\figurename{}
+
+
+
+\begin{document}
+\title{\vspace{-2cm}\textbf{Parcial \#1}\\
+\normalsize{Universidad de los Lagos}\\
+\normalsize{Departamento de Ciencias Exactas}\\
+\normalsize{Ingeniería Civil en Informática}\vspace{-3mm}} 
+
+\author {Academico\\Correo@ulagos.cl\vspace{-3mm}}
+\date{\today} 
+
+\maketitle
+\vspace{-0.6cm}
+\textbf{Nombre}:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\textbf{Puntaje: \_\_\_\_\_/100}
+\vspace{-0.4cm}
+\begin{multicols}{2}
+\textbf{Rut}:\\           
+
+\textbf{Nº Lista}:~~~~~~~~~~~~\textbf{Tiempo Total: 110 min}
+\end{multicols}\vspace{-1.2cm}
+
+
+\section{Enunciado}
+
+\blindtext %reemplazar esta linea
+
+\begin{lstlisting}
+#include<stdio.h>
+
+int main(){
+
+  return 0;
+}
+\end{lstlisting}
+
+
+\end{document}

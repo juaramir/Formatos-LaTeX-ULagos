@@ -1,0 +1,153 @@
+\documentclass[letter,12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xspace,epic,eepic}
+\usepackage[margin=1cm]{geometry}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{lmodern}
+\usepackage{listings}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{wrapfig}
+\usepackage{sidecap}
+\usepackage{caption}
+\usepackage{blindtext}
+\usepackage[sfdefault]{roboto}
+\oddsidemargin 0in
+\textwidth 6.75in
+\topmargin 0in
+\textheight 8.5in
+\parindent 0.5em
+\parskip 1ex
+
+  \providecommand{\keywords}[1]{\textbf{\textit{Palabras Clave---}} #1}
+
+  
+\lstset{
+	%backgroundcolor=\color{lbcolor},
+	frame=Ltb,
+  framerule=0pt,
+  aboveskip=0.5cm,
+	tabsize=4,
+	rulecolor=,
+	language=C, %%%CAMBIAR POR LENGUAJE DE PREFERENCIA
+  stringstyle=\ttfamily,
+        %basicstyle=\footnotesize,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=true,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        %frame=single,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        %tipos de letra y colores
+        identifierstyle=\ttfamily,
+        keywordstyle=\bfseries \color{black}, %palabras reservadas
+        commentstyle= \color[RGB]{99,99,99}, %comentarios
+        stringstyle=\color{black},%cadena de texto
+        %numeracion de lineas
+        framextopmargin=3pt,
+        framexbottommargin=3pt,
+        framexleftmargin=0.4cm,
+        framesep=0pt,
+        rulesep=.4pt,
+        rulesepcolor=\color{black},
+        numbers=left,
+        numbersep=15pt,
+        numberstyle=\tiny,
+        numberfirstline = false,
+        breaklines=true,
+}
+
+
+\def\figurename{}
+
+
+
+  
+\begin{document}
+\title{\vspace{-2cm}\textbf{TITULO}\\{\large Universidad de los Lagos}\\\vspace{-3mm}{\large Departamento de Ciencias Exactas}\\\vspace{-3mm}{\large Ingeniería Civil en Inform\'atica}} 
+\author {\textbf{AUTOR1}\\Correo1
+\and
+\textbf{AUTOR2}\\Correo2
+\and
+\textbf{AUTOR2}\\Correo2
+}
+\date{\today}
+
+\maketitle
+
+\begin{abstract}
+\blindtext %reemplazar esta linea por el resumen
+
+\keywords{Palabra1, Palabra2, Palabra3, Palabra4, Palabra5}
+\end{abstract}
+
+
+\section{secci\'on}
+
+
+\begin{lstlisting}
+#include<stdio.h>
+
+int main(){
+
+  return 0;
+}
+\end{lstlisting}
+
+
+\subsection{subsecci\'on}
+
+
+\begin{table}
+\begin{center}
+  \begin{tabular}{l|cc}
+  & & \\
+  \hline
+  & & \\
+  & &
+\end{tabular}
+\end{center}
+  \caption{ssss}
+  \label{T:cuadro1}
+\end{table}
+
+
+
+\subsubsection{subsubsecci\'on}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat\cite{001,002} . Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua \cite{002}. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Cuadro \ref{T:cuadro1} . 
+
+\begin{displaymath}C_L=\frac{(S_{22}-\Delta S_{11}^*)^*}{|S_{22}|^2=-|\Delta|^2}\end{displaymath}
+    \begin{displaymath}R_S=\frac{\sqrt{1-g_s}\cdot (1-|S_{11}|^2)}{1-(1-g_s)\cdot|S_{11}|^2}\end{displaymath}
+
+%%%%%
+%agregar referencias
+%\bibliographystyle{ieeetr}
+%\bibliography{mybib.bib}
+
+\begin{thebibliography}{99}
+%Bibliografía Formato IEEE
+\bibitem {000} N. Apellido, Titulo, Revista, Edición, Paginas. Ciudad, Pais, Año,
+
+\bibitem {001} R. M. Gutierrez, El impacto de la sobrepoblación de invertebrados en un ecosistema selvático, Revista Mundo Natural, 8, 73-82. 2013.
+
+\bibitem {002} R.A. Day How to Write and Publish a Scientific Paper, Second edn. ISI Press, Philadelphia. 1983
+
+\end{thebibliography}  
+
+\end{document}

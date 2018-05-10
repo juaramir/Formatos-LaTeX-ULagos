@@ -1,0 +1,252 @@
+\documentclass[aspectratio=43]{beamer}%[handout]
+\mode<handout>{
+\usepackage{pgfpages}
+\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm, landscape]
+}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{beamerthemeshadow,beamerthemesplit,cite,cancel,lmodern,eso-pic,fancyvrb,textcomp,lmodern,url,times,booktabs,amssymb,amsmath,ragged2e,float,subfig,xspace,epic,eepic,multicol,multirow,colortbl,color,graphicx,url}
+\usepackage[normalem]{ulem} %tachar texto con \sout{}
+\usepackage{listings} %CODIGOs
+\usepackage[sfdefault]{roboto}
+\setcounter{tocdepth}{3}
+\usepackage[figurename=]{caption}
+%Colores Ulagos
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+%Colores Ulagos
+\definecolor{amarillo}{RGB}{255,182,18}
+\definecolor{verde}{RGB}{52,178,51}
+\definecolor{rojo}{RGB}{237,41,57}
+\definecolor{azulu}{RGB}{19,15,204}
+\definecolor{azul}{RGB}{1,110,185}
+\definecolor{negro}{RGB}{35,31,32}
+\definecolor{naranjo}{RGB}{251,79,20}
+\newcommand\rojo[1]{\textcolor[RGB]{237,41,57}{#1}}
+\newcommand\gris[1]{\textcolor[gray]{.65}{#1}}
+\newcommand\azul[1]{\textcolor[RGB]{19,15,204}{#1}}
+\newcommand\verde[1]{\textcolor[RGB]{5,101,99}{#1}}
+\newcommand\naranjo[1]{\textcolor[RGB]{251,79,20}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Tikz
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\usetikzlibrary{snakes}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{patterns}
+\usetikzlibrary{fit}
+\usetikzlibrary{positioning} % LATEX and plain TEX
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%TEMA
+\mode<presentation>
+\usetheme{CambridgeUS}
+\usecolortheme[named=azul]{structure}
+\useinnertheme{rectangles}    
+\useoutertheme{infolines} 
+               
+\setbeamercovered{transparent}
+
+\setbeamerfont{block title}{size={}}
+\setbeamerfont{title}{shape=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape}
+\setbeamerfont{author}{shape=\scshape}
+\setbeamerfont{institute}{shape=\scshape}
+\setbeamerfont{block title}{shape=\scshape}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[circle]
+\setbeamertemplate{description item}[align left]
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{title page}[default][colsep=-4bp,rounded=false,shadow=false]
+%\setbeamertemplate{frametitle continuation}
+
+\setbeamercolor*{palette primary}{use=structure,fg=azul,bg=listinggray}
+\setbeamercolor*{palette secondary}{use=structure,fg=azul,bg=gray97}
+\setbeamercolor*{palette tertiary}{use=structure,fg=gray97,bg=azul}
+\setbeamercolor*{palette sidebar primary}{use=structure,fg=azul}
+\setbeamercolor*{palette sidebar tertiary}{use=structure,fg=azul}
+\setbeamercolor*{title}{use=structure,fg=white}
+\setbeamercolor*{author}{use=structure,fg=white}
+\setbeamercolor*{institute}{use=structure,fg=white}
+\setbeamercolor{frametitle right}{bg=azul!50!white}
+\setbeamercolor{structure}{fg=azul}
+\setbeamercolor{block title}{use=structure,fg=white,bg=amarillo}
+\setbeamercolor{block body}{use=structure,fg=negro,bg=amarillo!20!white}
+\setbeamercolor{block title example}{use=structure,fg=white,bg=verde!80!black}
+\setbeamercolor{block body example}{use=structure,fg=negro,bg=verde!20!white}
+\setbeamercolor{block title alerted}{use=structure,fg=white,bg=rojo!90!negro}
+\setbeamercolor{block body alerted}{use=structure,fg=negro,bg=rojo!20!white}
+%%%%%%%%%%%%%%%%%%%%%FIN TEMA
+
+%lstlisting %%%%%CODIGOS
+\lstset{tabsize=4,language=C,basicstyle=\small,upquote=true,aboveskip={1.5\baselineskip},columns=fixed,showstringspaces=false, extendedchars=true,breaklines=true, prebreak = \raisebox{0ex}[0ex][0ex]{\color{gray75}{\ensuremath{\hookleftarrow}}},showtabs=false,showspaces=false,showstringspaces=false,identifierstyle=\ttfamily,keywordstyle=\color[rgb]{0,0,1}, commentstyle=\color[rgb]{0.133,0.545,0.133}, stringstyle=\color[rgb]{0.627,0.126,0.941}} 
+  
+%%%%%%%%%%%%%%PORTADA
+\title[Titulo]{\textbf{\huge{Titulo}}\vspace{-0.3cm}}
+\subtitle{subtitulo\vspace{-0.7cm}}
+\author[Autor]{\small{\textbf{AUTOR1} \and \textbf{AUTOR2}\\ \texttt{Correo@ulagos.cl} \and \texttt{Correo@ulagos.cl}}\vspace{-0.2cm}}
+\institute[ULA]{\small{\textbf{Departamento de Ciencias Exactas}\\Ingeniería Civil en Informática}\vspace{-0.5cm}}
+\date[\today]{}
+%%%%%%%%%%%%%FIN PORTADA
+
+\begin{document}
+\setbeamertemplate{background}{\includegraphics[height=9.2cm,width=12.8cm]{fondoula43}}%4:3
+%\setbeamertemplate{background}{\centering\includegraphics[height=8.6cm,width=16.1cm]{fondoula169}}%16:9
+
+
+%Pagina de Portada
+\begin {frame} [plain]
+\vspace{5.25cm}
+\titlepage
+\end {frame}
+\setbeamertemplate{background}{}
+%%%%%%%%%%%%%%%%ÍNDICES
+\section[Contenido]{}
+\frame{
+  \frametitle{\textbf{Contenido}}
+\setcounter{tocdepth}{2}%1: solo titulo principal, 2: titulo y subtitulo, 3....
+\scriptsize
+\tableofcontents[]
+}%Generacion de Indice por capitulo
+\AtBeginSection[]{
+\begin{frame}
+\frametitle{\textbf{Contenido}}
+\scriptsize
+\tableofcontents[currentsection]
+\end{frame}}
+
+\AtBeginSubsection[]{
+\begin{frame}
+\frametitle{\textbf{Contenido}}  
+\scriptsize
+\tableofcontents[currentsection,currentsubsection]
+\end{frame}
+}
+%%%%%%%%%%%%%%%%FIN ÍNDICES
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%INICIO PRESENTACION
+
+\section{Prueba}
+\begin{frame}[fragile]
+\frametitle{\textbf{Colores y Bloques}}
+
+ Lo siguiente son ejemplos de texto en colores: \rojo{Hola}, \verde{Hola}, \azul{hola}, \naranjo{hola}
+ 
+ \begin{block}{Titulo}
+Contenido
+\end{block}
+
+
+\begin{exampleblock}{Titulo ejemplo}
+Contenido
+\end{exampleblock}
+
+
+\begin{alertblock}{Titulo alerta}
+Contenido
+\end{alertblock}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{\textbf{Items, Descripciones y Enumeraciones}}
+\justifying
+\transdissolve
+  \begin{itemize}
+  \item Item sin numeros
+    \begin{itemize}
+  \item nivel 2
+    \begin{itemize}
+    \item nivel 3
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\begin{enumerate}
+  \item Item Numerado
+    \begin{enumerate}
+     \item Nivel 2
+    \begin{enumerate}
+      \item Nivel 3
+    \end{enumerate}
+  \end{enumerate}
+\end{enumerate}
+
+\begin{description}
+  \item[Descripción] Texto descrito
+  \begin{description}
+  \item[Nivel 2] Texto
+\end{description}
+
+\end{description}
+\end{frame}
+
+
+
+
+\subsection{Códigos}
+\begin{frame}[fragile]
+\frametitle{\textbf{Código}}
+   \vspace{-0.8cm}
+\begin{lstlisting}
+#include<stdio.h>
+int main(){
+ printf("Hola Mundo");
+ return 0;
+}
+\end{lstlisting}\vspace{-0.3cm}
+\end{frame}
+
+
+\section{Matematica}
+\begin{frame}[fragile]
+\frametitle{\textbf{Ejemplo de Función Matemática}}
+\justifying
+ \begin{displaymath}C_L=\frac{(S_{22}-\Delta S_{11}^*)^*}{|S_{22}|^2=-|\Delta|^2}\end{displaymath}
+    \begin{displaymath}R_S=\frac{\sqrt{1-g_s}\cdot (1-|S_{11}|^2)}{1-(1-g_s)\cdot|S_{11}|^2}\end{displaymath}
+
+\end{frame}
+
+
+
+
+
+\section*{Bibliografía}
+\begin{frame}[allowframebreaks]
+\frametitle{\textbf{Bibliografía}}
+\justifying
+ \begin{thebibliography}{30}
+ 
+%%%%%%LIBROS
+\beamertemplatebookbibitems 
+\bibitem {001} Davis, M.: Scientific Papers and Presentations. Academic Press, San Diego (1997)
+
+
+%%%%ARTICULOS
+\beamertemplatearticlebibitems
+\bibitem {002} Day, R.A.: How to Write and Publish a Scientific Paper. Second edn. ISI Press, Philadelphia (1983)
+
+\end{thebibliography}  
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%FIN DOCUMENTO
+\end{document}
