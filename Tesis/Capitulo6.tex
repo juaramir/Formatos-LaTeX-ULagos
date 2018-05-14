@@ -1,0 +1,202 @@
+\chapter{Contenidos de ejemplo}
+a continuación te doy ejemplos de figuras, formular y tablas
+
+\section{Figuras}
+
+\blindtext %reemplazar esta linea
+
+
+\begin{figure}[H]
+\centering
+ \includegraphics[scale=0.1]{portada}
+  \caption{Organigrama del área \dots}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+ \includegraphics[scale=0.1]{portada}
+  \caption{Organigrama de la empresa \dots}
+\end{figure}
+
+\section{Tablas}
+
+\blindtext %reemplazar esta linea
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}\hline
+  A&B &C \\
+  \hline
+  D&E &F \\
+ G & H& I\\\hline
+\end{tabular}
+\caption{Ejemplo Tabla texto centrado}
+\label{t:01}
+\end{table}
+
+\blindtext %reemplazar esta linea
+ \ref{t:02}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|r|}\hline
+  A&B &C \\
+  \hline
+  D&E &F \\
+ G & H& I\\\hline
+\end{tabular}
+\caption{Ejemplo Tabla texto en todos los ordenes}
+\label{t:02}
+\end{table}
+
+\blindtext %reemplazar esta linea
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{3cm}|p{5cm}|p{2cm}|}\hline
+  A&B &C \\
+  \hline
+  D&E &F \\
+ G & H& I\\\hline
+\end{tabular}
+\caption{Ejemplo Tabla con tamaño de columnas predefinidos}
+\label{t:03}
+\end{table}
+\section{Formulas}
+
+\blindtext %reemplazar esta linea
+
+
+\begin{displaymath}C_L=\frac{(S_{22}-\Delta S_{11}^*)^*}{|S_{22}|^2=-|\Delta|^2}\end{displaymath}
+    \begin{displaymath}R_S=\frac{\sqrt{1-g_s}\cdot (1-|S_{11}|^2)}{1-(1-g_s)\cdot|S_{11}|^2}\end{displaymath}
+
+
+\section{Ámbitos}
+Ejemplos de algunos ámbitos para remarcar las cosas, si es que es una definición, ejemplo, demostración, entre otros.
+\subsection{Lorem}
+\blindtext %reemplazar esta linea
+
+\begin{definir}\label{def:01}
+\blindtext %reemplazar esta linea
+\end{definir}
+
+
+
+\subsubsection{Ámbitos y referencias}
+
+    \blindtext %reemplazar esta linea
+\ref{dem:01}.
+\begin{demo}\label{dem:01}
+\blindtext %reemplazar esta linea
+\end{demo}
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, como se ve en el Ejemplo \ref{ej:a}.
+
+\begin{ejemplo}\label{ej:a}
+    \blindtext %reemplazar esta linea
+
+\end{ejemplo}
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, como se ve en la Prueba \ref{pru:01}.
+\begin{prueba}\label{pru:01}
+   \blindtext %reemplazar esta linea
+
+\end{prueba}
+
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, como se ve en la Observación \ref{ob:01}.
+\begin{obs}\label{ob:01}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{obs}
+
+
+\section{Algoritmos}\label{A:alg}
+\blindtext %reemplazar esta linea
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, como en el Algoritmo \ref{CodC}.
+
+\lstset{language=C}
+\begin{lstlisting}[caption = C\'odigo en C de una sumatoria, label = CodC]
+#include <stdio.h>
+#include <stdlib.h>
+/* Algoritmo para realizar la sumatoria */
+/* S=2+4+6+...+2n */
+
+int main(void){
+	int i,s,n;
+	
+	/* inicializar el valor de la sumatoria en 0 */
+	s=0;
+	printf("ingrese la cantidad de elementos de la sumatoria=");
+	scanf("% d", &n);
+	/* Realiza la iteracion n veces, y el indice "i" lo multiplica por */
+	/* 2 y lo va sumando a s*/
+	for(i=1;i<=n;i++){
+		s = s	+ 2*i;
+	} 
+	printf("el resultado de la sumatoria es=% d\n",s);
+
+	return (0);
+}
+\end{lstlisting}
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod, en el Algoritmo \ref{codL} tempor incididunt ut labore et dolore magna aliqua.
+
+\lstset{language=LISP}
+\begin{lstlisting}[caption= C\'odigo LISP de una Lista, label = codL]
+(define (length x)
+    (if (list? x) (length-aux x)
+        (error "x no es una lista")))
+        
+(define (length-aux x)
+    (if (null? x) 0 (+1 (length-aux (cdr x)))))
+\end{lstlisting}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut, en el Algoritmo \ref{codP} labore et dolore magna aliqua.
+
+
+\lstset{language=PROLOG}
+\begin{lstlisting}[caption= C\'odigo PROLOG de un \'arbol geneal\'ogico, label=codP]
+% Arbol genealogico version 1.
+% padre(A,B) significa que B es el padre de A.
+
+padre(juan,alberto).
+padre(luis,alberto).
+padre(alberto,leoncio). 
+padre(geronimo,leoncio).
+padre(luisa,geronimo). 
+
+% Ahora se define las condiciones para que dos individuos sean hermanos hermano(A,B), significa que A es hermano de B.
+hermano(A,B) :- 
+    padre(A,P), 
+    padre(B,P), 
+    A \== B.
+% Ahora se define el parentesco abuelo-nieto.  nieto(A,B) significa que A es nieto de B.
+nieto(A,B) :- 
+    padre(A,P), 
+    padre(P,B). 
+\end{lstlisting}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+   \lstset{language=java}
+\begin{lstlisting}[caption= C\'odigo JAVA de una clase]
+class <Nombre>{
+   public static void main(String[] args){
+      instrucciones;
+   }
+}
+\end{lstlisting}
+
+\subsection{Ejemplo referencia a código en otro capitulo}
+En el Anexo \ref{A:01} puedes encontrar el Algoritmo \ref{codPH} el cual es un ejemplo de código PHP.
+
+
+
+\section{Uso Bibliografia}
+
+
+Para usar la bibliografía de un autor lo cito \cite{DBLPMH10}, si quiero mencionar a mas de una documento los cito  así \cite{ABC02,JanChomicki2008,SN01}
+
